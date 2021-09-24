@@ -1,21 +1,14 @@
-import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import illustration from '../../assets/images/illustration.svg';
 import logo from '../../assets/images/logo.svg';
-import googleIcon from '../../assets/images/google-icon.svg';
 
 import {
-  Aside, CreateRoom, Main, MainContent, Separator, Wrapper,
+  Aside, Main, MainContent, Separator, Wrapper,
 } from './styles';
 import { Button } from '../../components';
 
-export default function Home() {
-  const history = useHistory();
-
-  function navigateToNewRoom() {
-    history.push('/rooms/new');
-  }
-
+export default function NewRoom() {
   return (
     <Wrapper>
       <Aside>
@@ -27,15 +20,17 @@ export default function Home() {
       <Main>
         <MainContent>
           <img src={logo} alt="Letmeask" />
-          <CreateRoom type="button" onClick={navigateToNewRoom}>
-            <img src={googleIcon} alt="Logo do google" />
-            Crie sua sala com o google
-          </CreateRoom>
+          <h2>Crie uma nova sala</h2>
           <Separator>ou entre em uma sala</Separator>
           <form>
-            <input type="text" placeholder="Digite o código da sala" />
-            <Button type="submit">Entrar na sala</Button>
+            <input type="text" placeholder="Nome da sala" />
+            <Button type="submit">Criar sala</Button>
           </form>
+          <p>
+            Quer entrar em uma sala existente?
+            {' '}
+            <Link to="/">Click Aqui</Link>
+          </p>
         </MainContent>
       </Main>
     </Wrapper>
