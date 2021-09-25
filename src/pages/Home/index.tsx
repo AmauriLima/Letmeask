@@ -1,15 +1,14 @@
 import { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import illustration from '../../assets/images/illustration.svg';
 import logo from '../../assets/images/logo.svg';
 import googleIcon from '../../assets/images/google-icon.svg';
 
-import { Button } from '../../components';
+import { AsidePanel, Button } from '../../components';
 import { AuthContext } from '../../Context/AuthContext';
 
 import {
-  Aside, CreateRoom, Main, MainContent, Separator, Wrapper,
+  CreateRoom, Main, MainContent, Separator, Wrapper,
 } from './styles';
 
 export default function Home() {
@@ -26,11 +25,7 @@ export default function Home() {
 
   return (
     <Wrapper>
-      <Aside>
-        <img src={illustration} alt="Ilustração simbolizando perguntas e respostas" />
-        <strong>Crie salas de Q&amp;A ao-vivo</strong>
-        <p>Tire as dúvidas da sua audiência em tempo-real</p>
-      </Aside>
+      <AsidePanel />
 
       <Main>
         <MainContent>

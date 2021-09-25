@@ -1,14 +1,11 @@
 import { Link } from 'react-router-dom';
 
 import { useContext } from 'react';
-import illustration from '../../assets/images/illustration.svg';
 import logo from '../../assets/images/logo.svg';
 
-import {
-  Aside, Main, MainContent, Wrapper,
-} from './styles';
+import { Main, MainContent, Wrapper } from './styles';
 
-import { Button } from '../../components';
+import { AsidePanel, Button } from '../../components';
 import { AuthContext } from '../../Context/AuthContext';
 
 export default function NewRoom() {
@@ -16,11 +13,7 @@ export default function NewRoom() {
 
   return (
     <Wrapper>
-      <Aside>
-        <img src={illustration} alt="Ilustração simbolizando perguntas e respostas" />
-        <strong>Crie salas de Q&amp;A ao-vivo</strong>
-        <p>Tire as dúvidas da sua audiência em tempo-real</p>
-      </Aside>
+      <AsidePanel />
 
       <Main>
         <MainContent>
