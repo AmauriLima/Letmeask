@@ -5,8 +5,9 @@ import illustration from '../../assets/images/illustration.svg';
 import logo from '../../assets/images/logo.svg';
 
 import {
-  Aside, Main, MainContent, Separator, Wrapper,
+  Aside, Main, MainContent, Wrapper,
 } from './styles';
+
 import { Button } from '../../components';
 import { AuthContext } from '../../Context/AuthContext';
 
@@ -26,7 +27,6 @@ export default function NewRoom() {
           <img src={logo} alt="Letmeask" />
           <h1>{user?.name}</h1>
           <h2>Crie uma nova sala</h2>
-          <Separator>ou entre em uma sala</Separator>
           <form>
             <input type="text" placeholder="Nome da sala" />
             <Button type="submit">Criar sala</Button>

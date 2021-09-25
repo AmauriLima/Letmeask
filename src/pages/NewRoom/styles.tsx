@@ -111,27 +111,3 @@ export const CreateRoom = styled.button`
     filter: brightness(0.9);
   }
 `;
-
-export const Separator = styled.div`
-  font-size: 14px;
-  color: ${({ theme }) => theme.colors.gray.medium};
-  margin: 32px 0;
-  display: flex;
-  align-items: center;
-
-  &::before {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: ${({ theme }) => theme.colors.gray.medium};
-    margin-right: 16px;
-  }
-
-  &::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: ${({ theme }) => theme.colors.gray.medium};
-    margin-left: 16px;
-  }
-`;
